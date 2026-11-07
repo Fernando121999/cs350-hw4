@@ -8,7 +8,7 @@ namespace Homework4
     {
         private const int MaxMeals = 21;
         private const double MaxLimit = 1000.0;
-
+        private const double CloseLimitThreshold = 0.90;
         // Main calculator method
         public BudgetResult EvaluatePlan(
             List<double> mealCosts,
@@ -93,7 +93,8 @@ namespace Homework4
         // Helper #4
         private bool IsCloseToLimit(double total, double limit)
         {
-            return total >= (limit * 0.90) && total <= limit;
+            return total >= (limit * CloseLimitThreshold) &&
+       total <= limit;
         }
     }
 }
