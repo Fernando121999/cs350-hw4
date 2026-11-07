@@ -1,3 +1,4 @@
 <Solution>
-  <Project Path="Homework4/Homework4.csproj" />
+  <Project Path="../Homework4.Tests/Homework4.Tests.csproj" Id="f0f3143f-5abe-4d94-b18b-02819e1e4481" />
+  <Project Path="Homework4.csproj" />
 </Solution>

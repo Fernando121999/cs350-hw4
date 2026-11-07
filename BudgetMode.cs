@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
-public enum BudgetMode
+namespace Homework4
 {
-    PerMeal,
-    PerWeek
-}                  
+    public enum BudgetMode
+    {
+        PerMeal,
+        PerWeek
+    }
+}              
