@@ -18,7 +18,7 @@ namespace Homework4
             ValidateInput(mealCosts, limit);
 
             BudgetResult result = new BudgetResult();
-
+            
             if (mealCosts.Count == 0)
             {
                 result.Fits = true;
@@ -49,6 +49,11 @@ namespace Homework4
         // Helper #1
         private void ValidateInput(List<double> mealCosts, double limit)
         {
+            // NULL GUARD ADDED FOR PART 3
+            if (mealCosts == null)
+            {
+                throw new ArgumentNullException(nameof(mealCosts));
+            }
             if (limit <= 0 || limit > MaxLimit)
             {
                 throw new ArgumentException(
