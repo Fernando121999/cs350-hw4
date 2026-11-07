@@ -9,6 +9,13 @@ namespace Homework4
         private const int MaxMeals = 21;
         private const double MaxLimit = 1000.0;
         private const double CloseLimitThreshold = 0.90;
+        private BudgetResult CreateEmptyResult()
+        {
+            return new BudgetResult
+            {
+                Fits = true
+            };
+        }
         // Main calculator method
         public BudgetResult EvaluatePlan(
             List<double> mealCosts,
@@ -18,11 +25,10 @@ namespace Homework4
             ValidateInput(mealCosts, limit);
 
             BudgetResult result = new BudgetResult();
-            
+
             if (mealCosts.Count == 0)
             {
-                result.Fits = true;
-                return result;
+                return CreateEmptyResult();
             }
 
             if (mode == BudgetMode.PerMeal)
